@@ -1,0 +1,19 @@
+<main>
+  <app-learning-resources />
+
+  <hr />
+
+  <app-auth />
+
+  <!-- @if (isAdmin()) {
+    <p>Only admins should see this</p>
+  } -->
+
+  <!-- <ng-template appAuth userType="admin">
+    <p>Only admins should see this</p>
+  </ng-template> -->
+  
+  <p *appAuth="'admin'">Only admins should see this</p>
+  <p *appAuth="'user'">Regular users should see this</p>
+
+</main>
